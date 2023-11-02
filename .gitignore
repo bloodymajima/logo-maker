@@ -1,2 +1,3 @@
 # Indicates which files and folders Git should ignore
 package-lock.json
+node_modules
