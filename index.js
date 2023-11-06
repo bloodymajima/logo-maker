@@ -6,7 +6,8 @@
 // shape.setColor("blue");
 // expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />'); 
 
-const inquirer = require('inquirer');
+import inquirer from "node-inquirer";
+
 const {Circle, Square, Triangle} = require('apply./lib/shapes');
 
 
