@@ -1,7 +1,8 @@
 # SVG Logo Maker
+Module 10 
 
 ## Description 
-
+This application generates a logo from three shapes (circle, square or triangle), and many colors! I learned more about SVG files, using node modules, and using the command line to run a program. This application is useful for creating a simple logo, with an acronym inside, quickly. 
 
 ## User Story
 AS a freelance web developer
@@ -26,3 +27,5 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 ## Credits
 Tutor
+[youtube](https://www.youtube.com/watch?v=GJYMcLus3v0&ab_channel=THOSCALLE)
+[stack overflow](https://stackoverflow.com/questions/69081410/error-err-require-esm-require-of-es-module-not-supported)

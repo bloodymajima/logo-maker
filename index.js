@@ -6,14 +6,46 @@
 // shape.setColor("blue");
 // expect(shape.render()).toEqual('<polygon points="150, 18 244, 182 56, 182" fill="blue" />'); 
 
-import inquirer from "node-inquirer";
+const inquirer = require("inquirer");
+const fs = require("fs");
 
-const {Circle, Square, Triangle} = require('apply./lib/shapes');
+const { Circle, Square, Triangle } = require('./lib/shapes');
+
+const generateSVG = (shape, text) =>
+`<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    ${shape}
+
+    ${text}
+
+    </svg>
+  `;
 
 
 inquirer
   .prompt([
-    /* Pass your questions in here */
+    {
+      type: "list",
+      name: "shape",
+      message: "Choose a shape",
+      choices: ["circle", "square", "triangle"],
+    },
+    {
+      type: "input",
+      name: "shapeColor",
+      message:
+        "Choose a color for shape",
+    },
+    {
+      type: "input",
+      name: "text",
+      message: "Enter up to 3 characters for the text inside logo",
+    },
+    {
+      type: "input",
+      name: "textColor",
+      message:
+        "Choose a color for text",
+    }
   ])
   .then((answers) => {
     // Use user feedback for... whatever!!
